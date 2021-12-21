@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.filters__container {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 1rem;
+}
