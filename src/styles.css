@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f6f6f6;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -15,8 +22,22 @@
   height: 100%;
 }
 
-.filters__container {
+header {
+  background-color: #010821;
+  padding: 2rem;
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 1rem;
+  align-items: center;
+  color: #f6f6f6;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 2.25rem;
+  padding: 0 1rem;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

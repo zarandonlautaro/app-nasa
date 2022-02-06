@@ -22,18 +22,24 @@ const GalleryRovers = () => {
   const showLatestPhotos = data?.latest_photos?.slice(0, 25).map((dat) => {
     return <img src={dat.img_src} alt={dat.id} key={dat.id} />;
   });
+
   return (
     <>
-      <h1>Viewer NASA</h1>
-      <h3>Enjoy</h3>
-      <div className="filters__container">
-        <SelectRover handleChange={handleRover} />
-        <SelectCamera
-          handleChange={handleCamera}
-          roverSelected={roverSelected}
+      <header>
+        <img
+          src="https://spaceplace.nasa.gov/resources/homepage/nasa.png"
+          height={77}
         />
-        <DatePicker handleChange={handleDate} />
-      </div>
+        <p>The Mars Rovers</p>
+        <div className="header__container">
+          <SelectRover handleChange={handleRover} />
+          <SelectCamera
+            handleChange={handleCamera}
+            roverSelected={roverSelected}
+          />
+          <DatePicker handleChange={handleDate} />
+        </div>
+      </header>
       <div className="gallery">
         {isLoading ? (
           <Loader />
